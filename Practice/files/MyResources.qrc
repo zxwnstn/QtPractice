@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="/myfile">
+    <file>../text/asdf.txt</file>
+  </qresource>
+</RCC>
