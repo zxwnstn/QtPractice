@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "mainwindow.h"
+#include "MainWindow/mainwindow.h"
 
 int main(int argc, char** argv)
 {
