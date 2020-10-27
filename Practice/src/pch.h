@@ -22,6 +22,7 @@
 #include <QTreeWidget.h>
 #include <QProgressBar.h>
 #include <qthread.h>
+#include <QFontDatabase.h>
 
 #include <iostream>
 #include <filesystem>

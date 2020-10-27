@@ -4,5 +4,8 @@
     <file>../texture/options.png</file>
     <file>../texture/multi.png</file>
     <file>../texture/net.png</file>
+    <file>../fonts/segoeui.ttf</file>
+    <file>../fonts/segoeuib.ttf</file>
+    <file>../fonts/BMJUA_ttf.ttf</file>
   </qresource>
 </RCC>

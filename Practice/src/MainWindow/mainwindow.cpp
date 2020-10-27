@@ -16,17 +16,25 @@ MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
 	, ui(new Ui::MainWindow)
 {
+	QFont font1("BM JUA");
+	QFont font2("Segoe UI");
+	QFont font3("Segoe UI");
+
 	ui->setupUi(this);
-	ui->pushButton->setText("6: layout buddies, tabs");
+	//ui->pushButton->setText("6: layout buddies, tabs");
+	ui->pushButton->setText(QString::fromStdWString(L"·¹ÀÌ¾Æ¿ô"));
 	ui->pushButton->setGeometry(10, 100, 130, 100);
+	ui->pushButton->setFont(font1);
 
 	ex8pushButton = new QPushButton(ui->centralwidget);
 	ex8pushButton->setText(QString("8: Ver Hor layout"));
 	ex8pushButton->setGeometry(QRect(10, 200, 130, 100));
+	ex8pushButton->setFont(font2);
 
 	ex9pushButton = new QPushButton(ui->centralwidget);
 	ex9pushButton->setText(QString("9: Grid Layout"));
 	ex9pushButton->setGeometry(QRect(10, 300, 130, 100));
+	ex9pushButton->setFont(font3);
 
 	ex10pushButton = new QPushButton(ui->centralwidget);
 	ex10pushButton->setText(QString("10: Splitters"));
