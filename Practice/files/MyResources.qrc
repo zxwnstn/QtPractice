@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="/myfile">
     <file>../text/asdf.txt</file>
+    <file>../texture/options.png</file>
+    <file>../texture/multi.png</file>
+    <file>../texture/net.png</file>
   </qresource>
 </RCC>

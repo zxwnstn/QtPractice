@@ -6,6 +6,11 @@
 #include "MyWidget/MyFirstWidget.h"
 #include "MyWidget/MySecondWidget.h"
 #include "ex10/Splitters.h"
+#include "ex23/menubar.h"
+#include "ex24/ProgressBar.h"
+#include "ex25/StatusBar.h"
+#include "ex26/MessageBox.h"
+#include "Thread/MyFirstThread.h"
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -51,6 +56,26 @@ MainWindow::MainWindow(QWidget *parent)
 	ex21pushButton->setText(QString("21: list widget"));
 	ex21pushButton->setGeometry(QRect(160, 500, 130, 100));
 
+	ex23pushButton = new QPushButton(ui->centralwidget);
+	ex23pushButton->setText(QString("23: menubar action"));
+	ex23pushButton->setGeometry(QRect(310, 100, 130, 100));
+
+	ex24pushButton = new QPushButton(ui->centralwidget);
+	ex24pushButton->setText(QString("24: progress bar"));
+	ex24pushButton->setGeometry(QRect(310, 200, 130, 100));
+
+	ex25pushButton = new QPushButton(ui->centralwidget);
+	ex25pushButton->setText(QString("25: status bar"));
+	ex25pushButton->setGeometry(QRect(310, 300, 130, 100));
+
+	ex26pushButton = new QPushButton(ui->centralwidget);
+	ex26pushButton->setText(QString("26: message box"));
+	ex26pushButton->setGeometry(QRect(310, 400, 130, 100));
+
+	exthreadpushButton = new QPushButton(ui->centralwidget);
+	exthreadpushButton->setText(QString("thread"));
+	exthreadpushButton->setGeometry(QRect(310, 500, 130, 100));
+
 	QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(OnClick()));
 	QObject::connect(ex8pushButton, SIGNAL(clicked()), this, SLOT(Ex8()));
 	QObject::connect(ex9pushButton, SIGNAL(clicked()), this, SLOT(Ex9()));
@@ -60,19 +85,58 @@ MainWindow::MainWindow(QWidget *parent)
 	QObject::connect(ex19pushButton, SIGNAL(clicked()), this, SLOT(Ex19()));
 	QObject::connect(ex20pushButton, SIGNAL(clicked()), this, SLOT(Ex20()));
 	QObject::connect(ex21pushButton, SIGNAL(clicked()), this, SLOT(Ex21()));
+	QObject::connect(ex23pushButton, SIGNAL(clicked()), this, SLOT(Ex23()));
+	QObject::connect(ex24pushButton, SIGNAL(clicked()), this, SLOT(Ex24()));
+	QObject::connect(ex25pushButton, SIGNAL(clicked()), this, SLOT(Ex25()));
+	QObject::connect(ex26pushButton, SIGNAL(clicked()), this, SLOT(Ex26()));
+	QObject::connect(exthreadpushButton, SIGNAL(clicked()), this, SLOT(thread()));
 	QObject::connect(ex_ex1_pushButton, &QPushButton::clicked, std::bind(&MainWindow::NoneSlotsListener, this));
 }
 
 MainWindow::~MainWindow()
 {
+	(new StatusBar)->show();
 }
+
 
 void MainWindow::NoneSlotsListener()
 {
 	QMessageBox::information(this, "Title here", "NoneSlotsListener");
 }
 
+void MainWindow::thread()
+{
+	auto thread1 = new MyFirstThread("high");
+	auto thread2 = new MyFirstThread("normal");
+	auto thread3 = new MyFirstThread("low");
 
+	thread1->start(QThread::Priority::HighestPriority);
+	thread2->start(QThread::Priority::NormalPriority);
+	thread3->start(QThread::Priority::LowestPriority);
+}
+
+void MainWindow::Ex26()
+{
+	(new MessageBox)->show();
+}
+
+
+void MainWindow::Ex25()
+{
+	(new StatusBar)->show();
+}
+
+void MainWindow::Ex24()
+{
+	auto progress = new ProgressBar;
+	progress->show();
+}
+
+void MainWindow::Ex23()
+{
+	auto menu = new menubar;
+	menu->show();
+}
 
 void MainWindow::Ex21()
 {

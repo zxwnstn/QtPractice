@@ -18,6 +18,10 @@ set(project_ui
     src/MainWindow/mainwindow.ui
     src/MyWidget/MyFirstWidget.ui
 	src/ex10/Splitters.ui    
+	src/ex23/menubar.ui
+	src/ex24/ProgressBar.ui
+	src/ex25/StatusBar.ui
+	src/ex26/MessageBox.ui
 )
 
 #header
@@ -27,6 +31,11 @@ set(project_headers
     src/MyWidget/MyFirstWidget.h
     src/MyWidget/MySecondWidget.h
 	src/ex10/Splitters.h
+	src/ex23/menubar.h
+	src/ex24/ProgressBar.h
+	src/ex25/StatusBar.h
+	src/ex26/MessageBox.h
+	src/Thread/MyFirstThread.h
 )
 
 #cpp
@@ -37,6 +46,11 @@ set(project_sources
     src/MyWidget/MyFirstWidget.cpp
     src/MyWidget/MySecondWidget.cpp
 	src/ex10/Splitters.cpp
+	src/ex23/menubar.cpp
+	src/ex24/ProgressBar.cpp
+	src/ex25/StatusBar.cpp
+	src/ex26/MessageBox.cpp
+	src/Thread/MyFirstThread.cpp
 )
 
 #qrc

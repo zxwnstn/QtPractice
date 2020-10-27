@@ -1,16 +1,5 @@
 #pragma once
 
-#include <QMainWindow>
-#include <QApplication>
-#include <QPropertyAnimation>
-#include <QWidget>
-#include <QLabel>
-#include <QGridLayout>
-#include <QTimer>
-#include <QPainter>
-#include <QDesktopWidget>
-#include <QDebug>
-
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -21,6 +10,7 @@ class MainWindow : public QMainWindow
 
 private slots:
 	void OnClick();
+	void thread();
 	void Ex8();
 	void Ex9();
 	void Ex10();
@@ -29,6 +19,10 @@ private slots:
 	void Ex19();
 	void Ex20();
 	void Ex21();
+	void Ex23();
+	void Ex24();
+	void Ex25();
+	void Ex26();
 
 public:
 	void NoneSlotsListener();
@@ -51,4 +45,10 @@ private:
 	QPushButton* ex19pushButton;
 	QPushButton* ex20pushButton;
 	QPushButton* ex21pushButton;
+	QPushButton* ex23pushButton;
+	QPushButton* ex24pushButton;
+	QPushButton* ex25pushButton;
+	QPushButton* ex26pushButton;
+	QPushButton* ex27pushButton;
+	QPushButton* exthreadpushButton;
 };

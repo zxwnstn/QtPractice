@@ -1,9 +1,10 @@
 #pragma once
 
-#include <QMainWindow>
 #include <QApplication>
-#include <QPropertyAnimation>
+#include <QtCore>
 #include <QWidget>
+#include <QMainWindow>
+#include <QPropertyAnimation>
 #include <QLabel>
 #include <QGridLayout>
 #include <QTimer>
@@ -19,6 +20,8 @@
 #include <QListWidget.h>
 #include <QColor.h>
 #include <QTreeWidget.h>
+#include <QProgressBar.h>
+#include <qthread.h>
 
 #include <iostream>
 #include <filesystem>
